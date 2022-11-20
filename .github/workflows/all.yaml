@@ -1,4 +1,4 @@
-name: 0 - Run Everything
+name:  Run Everything
 
 
 on:
@@ -9,6 +9,6 @@ on:
 
 jobs:
   test_django:
-    uses: ./.github/workflows/hello-world.yaml #this calls a job right out of a different workflow
+    uses: ./.github/workflows/hello-world.yaml
     secrets:
-      DJANGO_SECRET_KEY: "${{ secrets.DJANGO_SECRET_KEY }}"
+      DJANGO_SECRET_KEY: "abc123"
