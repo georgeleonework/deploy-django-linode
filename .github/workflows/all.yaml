@@ -1,4 +1,4 @@
-name:  Run Everything
+name: 0 - Run Everything
 
 
 on:
@@ -13,5 +13,4 @@ jobs:
     secrets:
       DJANGO_SECRET_KEY: "${{ secrets.DJANGO_SECRET_KEY }}"
   build_django:
-    needs: test_django
     uses: ./.github/workflows/container.yaml
