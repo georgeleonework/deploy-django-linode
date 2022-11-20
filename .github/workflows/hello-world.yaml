@@ -2,14 +2,18 @@ name: Give a name anything
 
 on:
   workflow_dispatch:
+  push:
+    branches:[main] #this sets it up so that we run our workflows any time that we push a commit
 
 
 jobs:
   test_my_django_project:
     runs-on: ubuntu-latest
+    env: 
+      DJANGO_SECRET_KEY: "this-is-it"
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Run hello World
       run: |
-        echo "hello world"
+        echo "DJANGO_SECRET_KEY: ${{ env.DJANGO_SECRET_KEY }}"
