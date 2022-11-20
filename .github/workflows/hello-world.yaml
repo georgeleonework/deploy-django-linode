@@ -2,20 +2,15 @@ name: Give a name anything
 
 on:
   workflow_call:
-    secrets:
-    DJANGO_SECRET_KEY:
-      required: true
   workflow_dispatch:
-  # push:
-  #   branches: [main] #this sets it up so that we run our workflows any time that we push a commit
-
-#adding a comment here to try to re push this commit 
-
+  push:
+    branches: [main]
+  
 jobs:
   test_my_django_project:
     runs-on: ubuntu-latest
     env: 
-      DJANGO_SECRET_KEY: "${{ secrets.DJANGO_SECRET_KEY }}"
+      DJANGO_SECRET_KEY: "abc123"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -32,5 +27,5 @@ jobs:
           python -m pip install -r requirements.txt    
       - name: Run Tests
         run: |
-          python3.10 manage.py test
+          python manage.py test
 
