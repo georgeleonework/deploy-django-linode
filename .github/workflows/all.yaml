@@ -10,4 +10,4 @@ jobs:
   test_django:
     uses: ./.github/workflows/hello-world.yaml #this calls a job right out of a different workflow
     secrets:
-      DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+      DJANGO_SECRET_KEY: "${{ secrets.DJANGO_SECRET_KEY }}"
