@@ -60,7 +60,7 @@ jobs:
       - name: Install requirements
         run: |
           python3.10 -m pip install pip --upgrade
-          python3.10 -m pip install mysqlclient
+          python3.10 -m pip install mysqlclient --upgrade
           python3.10 -m pip install -r requirements.txt
           
       - name: Run Tests
