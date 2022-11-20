@@ -3,8 +3,8 @@ name: Give a name anything
 on:
   workflow_call:
   workflow_dispatch:
-  push:
-    branches: [main] #this sets it up so that we run our workflows any time that we push a commit
+  # push:
+  #   branches: [main] #this sets it up so that we run our workflows any time that we push a commit
 
 #adding a comment here to try to re push this commit 
 
