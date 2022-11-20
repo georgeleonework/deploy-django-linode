@@ -20,7 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run hello World
-        run: | #we can run secrets.DJANGO_SECRET_KEY below because the new secret key is stored in github secrets
+        run: | 
           echo "DJANGO_SECRET_KEY IS: ${{ env.DJANGO_SECRET_KEY }}" 
       - name: Setup Python 3.10
         uses: actions/setup-python@v2
